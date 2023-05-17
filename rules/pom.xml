@@ -239,7 +239,7 @@
                                 <artifactItem>
                                     <groupId>org.jboss.windup.config</groupId>
                                     <artifactId>windup-config-xml</artifactId>
-                                    <version>${version.windup}</version>
+                                    <version>${version.windup.upstream}</version>
                                     <type>jar</type>
                                     <classifier>forge-addon</classifier>
                                     <includes>schema/*.xsd</includes>
