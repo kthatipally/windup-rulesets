@@ -8,10 +8,13 @@ on:
       - 'releases/**'
 
 jobs:
-
   windup-build:
     runs-on: ubuntu-latest
     steps:
+      -   name: Set up Maven
+          uses: stCarolas/setup-maven@v4.5
+          with:
+            maven-version: 3.8.2
       - name: Checkout WindUp upstream repo
         uses: actions/checkout@v3
         with:
@@ -43,6 +46,10 @@ jobs:
         tests-pattern: [ 'rules-reviewed/azure' ]
         java-version: [ 11, 17 ]
     steps:
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
+        with:
+          maven-version: 3.8.2
       - uses: actions/checkout@v3
       - name: Set up MS Build of OpenJDK
         uses: actions/setup-java@v3
